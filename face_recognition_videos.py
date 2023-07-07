@@ -28,6 +28,7 @@ while True:
         for (name, encodings) in name_encodings_dict.items():
             # compute the number of matches between the current encoding and the encodings
             # of the known faces and store the number of matches in the dictionary
+            # print(encodings)
             counts[name] = nb_of_matches(encodings, encoding)
         # check if all the number of matches are equal to 0
         # if there is no match for any name, then we set the name to "Unknown"

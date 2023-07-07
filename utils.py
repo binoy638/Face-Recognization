@@ -82,6 +82,7 @@ def nb_of_matches(known_encodings, unknown_encoding):
     # and all the face encodings in the database
     distances = np.linalg.norm(known_encodings - unknown_encoding, axis=1)
     # keep only the distances that are less than the threshold
-    small_distances = distances <= 0.6
+    small_distances = distances <= 0.4  # 0.6 initial value
+    print(small_distances)
     # return the number of matches
     return sum(small_distances)
